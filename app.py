@@ -11,4 +11,5 @@ def predict():
   exp = float(request.args.get('exp'))
   prediction = model.predict([[exp]])
   return render_template('index.html', prediction_text='Regression Model  has predicted salary for given experinace is : {}'.format(prediction))
-app.run(debug=True)
+if __name__=="__main__":
+  app.run(debug=True)
